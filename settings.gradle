@@ -1,0 +1,3 @@
+include ':BarGraphLibrary'
+include ':app'
+rootProject.name = "BarGraphExample"
