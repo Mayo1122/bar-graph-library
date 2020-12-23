@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#E5422C</color>
+    <color name="colorPrimaryDark">#E5422C</color>
+    <color name="colorAccent">#D81B60</color>
+    <color name="transparent">#00FFFFFF</color>
+    <color name="black">#000000</color>
+    <color name="black_overlay">#cbcbcb</color>
+    <color name="silver_chalice_90">#E69E9E9E</color>
+    <color name="silver_chalice">#9E9E9E</color>
+    <color name="despText">#909090</color>
+    <color name="gray">#E2E6EE</color>
+    <color name="placeholder_gray">#B2B2B2</color>
+    <color name="bottom_line">#D4D4D4</color>
+    <color name="red">#E5422C</color>
+    <color name="green">#1da664</color>
+    <color name="orange">#dd9900</color>
+    <color name="blue">#14a5c7</color>
+    <color name="blue_dark">#3A2E6D</color>
+</resources>

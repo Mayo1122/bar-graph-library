@@ -1,6 +1,7 @@
 package com.macrohard.bargraphlibrary
 
 import android.content.Context
+import android.graphics.drawable.Drawable
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -36,13 +37,24 @@ open class BarChartFragment : BaseFragment<FragmentBarChartBinding>() {
     override val layoutId: Int
         get() = R.layout.fragment_bar_chart
 
+
+    // Customizations
+    private var barBgColor = R.color.blue_dark
+    private var barBgDrawable:Drawable? = null
+
+    public fun setBarBackgroundColor(color: Int) {
+        this.barBgColor = color
+    }
+    public fun setBarBackgroundDrawable(drawable: Drawable) {
+        this.barBgDrawable = drawable
+    }
+
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         mContext = activity!!.baseContext
 
         //dummyData()
         initViews()
-        listeners()
     }
 
     private fun dummyDataBars() {
@@ -78,9 +90,6 @@ open class BarChartFragment : BaseFragment<FragmentBarChartBinding>() {
         yLabels.reverse()
     }
 
-    private fun listeners() {
-    }
-
     private fun initViews() {
         setAdapters()
     }
@@ -93,6 +102,9 @@ open class BarChartFragment : BaseFragment<FragmentBarChartBinding>() {
                 barsAdapter.cellWidth = binding.barRecyclerView.width
                 barsAdapter.cellHeight = binding.barRecyclerView.height
                 barsAdapter.maxBar = 700
+                this.barBgDrawable?.let {
+                        barsAdapter.barBgDrawable = it
+                }
                 dummyDataBars()
                 barsAdapter.notifyDataSetChanged()
             }

@@ -11,7 +11,9 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        addFirstFragment(BarChartFragment(),findViewById<FrameLayout>(R.id.container_frame).id)
+        val fragment = BarChartFragment()
+        fragment.setBarBackgroundDrawable(resources.getDrawable(com.macrohard.bargraphlibrary.R.drawable.white_rounded_bg))
+        addFirstFragment(fragment,findViewById<FrameLayout>(R.id.container_frame).id)
     }
 
     /**
